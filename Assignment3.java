@@ -1,6 +1,9 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
+// Adding comments for part 10
+// Using these to push into new branch
+// This is the branch titled "part10"
 public class Assignment3 {
 	
 	// Main method that calls addNumbers and multiplyNumbers
