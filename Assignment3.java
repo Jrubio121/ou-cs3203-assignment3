@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Assignment3 {
@@ -8,7 +9,7 @@ public class Assignment3 {
 		int addResult;
 		int multiplyResult;
 		int[] numbers = new int[5];
-		
+		int[] reversed = new int [numbers.length];
 		Scanner input = new Scanner(System.in);
 		
 		for(int i = 0; i < numbers.length; ++i) {
@@ -18,9 +19,11 @@ public class Assignment3 {
 		
 		addResult = addNumbers(numbers);
 		multiplyResult = multiplyNumbers(numbers);
+		reversed = reverseNumbers(numbers);
 		
 		System.out.println("Addition Result: " + addResult);
 		System.out.println("Multiplication Result: " + multiplyResult);
+		System.out.println("Reversed Array: " + Arrays.toString(reversed));
 		
 		input.close();
 	}
@@ -45,6 +48,20 @@ public class Assignment3 {
 			}
 			
 			return result;
+		}
+		
+	// Method that reverses numbers in an array
+		public static int[] reverseNumbers(int[] numbers) {
+			
+			int[] reversed = new int[numbers.length];
+			int last = numbers.length;
+			
+			for(int i = 0; i < numbers.length; ++i) {
+				reversed[last - 1] = numbers[i];
+				last = last - 1;
+			}
+			return reversed;
+			
 		}
 		
 }
