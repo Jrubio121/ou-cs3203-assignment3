@@ -1,3 +1,5 @@
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Assignment3 {
@@ -45,6 +47,20 @@ public class Assignment3 {
 			}
 			
 			return result;
+		}
+		
+	// Method that reverses numbers in an array
+		public static int[] reverseNumbers(int[] numbers) {
+			
+			int[] reversed = new int[numbers.length];
+			int last = numbers.length;
+			
+			for(int i = 0; i < numbers.length; ++i) {
+				reversed[last - 1] = numbers[i];
+				last = last - 1;
+			}
+			return reversed;
+			
 		}
 		
 }
