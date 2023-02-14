@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class Assignment3 {
@@ -10,7 +9,7 @@ public class Assignment3 {
 		int addResult;
 		int multiplyResult;
 		int[] numbers = new int[5];
-		
+		int[] reversed = new int [numbers.length];
 		Scanner input = new Scanner(System.in);
 		
 		for(int i = 0; i < numbers.length; ++i) {
@@ -20,9 +19,11 @@ public class Assignment3 {
 		
 		addResult = addNumbers(numbers);
 		multiplyResult = multiplyNumbers(numbers);
+		reversed = reverseNumbers(numbers);
 		
 		System.out.println("Addition Result: " + addResult);
 		System.out.println("Multiplication Result: " + multiplyResult);
+		System.out.println("Reversed Array: " + Arrays.toString(reversed));
 		
 		input.close();
 	}
